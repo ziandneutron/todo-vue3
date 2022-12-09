@@ -1,29 +1,24 @@
 <script setup>
 import TodoCard from '@/components/TodoCard.vue';
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
 
-const todoList = [
-  {
-    title: 'todo 1',
-    description: 'description todo 1'
-  },
-  {
-    title: 'todo 2',
-    description: 'description todo 2'
-  },
-  {
-    title: 'todo 3',
-    description: 'description todo 3'
-  },
-  {
-    title: 'todo D',
-    description: 'description todo 3'
-  }
-];
+const todoList = ref([]);
+
+async function getTodoList() {
+  const res = await axios.get('http://localhost:3000/todo');
+
+  todoList.value = res.data;
+}
+
+onMounted(async () => {
+  await getTodoList()
+})
 
 </script>
 
 <template>
   <div class="grid grid-cols-4 gap-10">
-    <TodoCard :title="item.title" :description="item.description" v-for="(item) in todoList" :key="item" />
+    <TodoCard v-for="(item) in todoList" :key="item" :title="item.title" :description="item.description" />
   </div>
 </template>

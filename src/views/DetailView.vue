@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { onMounted, reactive } from 'vue';
 import { useRoute } from 'vue-router'
+import TodoItems from '@/components/TodoItems.vue'
 
 const route = useRoute()
 
@@ -30,9 +31,6 @@ onMounted(() => {
     <h1>Detail Todo</h1>
     <div>Title: {{ todoDetail.title }}</div>
     <div>Description: {{ todoDetail.description }}</div>
-    <div>Items:</div>
-    <div>
-      <div class="badge" v-for="(item) in todoDetail.items" :key="item">{{ item }}</div>
-    </div>
+    <TodoItems :items="todoDetail.items" ></TodoItems>
   </div>
 </template>

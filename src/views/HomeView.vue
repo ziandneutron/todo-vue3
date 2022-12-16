@@ -19,6 +19,6 @@ onMounted(async () => {
 
 <template>
   <div class="grid grid-cols-4 gap-10">
-    <TodoCard v-for="(item) in todoList" :key="item" :title="item.title" :description="item.description" />
+    <TodoCard v-for="(item, index) in todoList" :key="index" :index="index" :title="item.title" :description="item.description" />
   </div>
 </template>

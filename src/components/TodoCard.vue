@@ -9,6 +9,10 @@ const props = defineProps({
   description: {
     type: String,
     default: 'ini default'
+  },
+  index: {
+    type: Number,
+    default: 0
   }
 })
 </script>
@@ -20,7 +24,7 @@ const props = defineProps({
       <h2 class="card-title">{{ props.title }}</h2>
       <p>{{ props.description }}</p>
       <div class="card-actions justify-end">
-        <RouterLink to="/detail" class="btn btn-primary">Buy Now</RouterLink>
+        <RouterLink :to="`/detail/${props.index+1}`" class="btn btn-primary">Buy Now</RouterLink>
       </div>
     </div>
   </div>

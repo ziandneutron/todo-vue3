@@ -1,0 +1,336 @@
+{
+  "uuid": "1fd347c8-cc21-4cc0-93df-9f46ca8329f1",
+  "lastMigration": 24,
+  "name": "Todo vue3",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3002,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "b88ea9d8-0221-44a0-965d-a3f17e226e98",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "ce3134cf-06fe-4f53-802b-00a2648629f8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7f7f4051-1eef-4d4f-a345-f2ef451f7cd1",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "todo",
+      "responses": [
+        {
+          "uuid": "7120ceff-ec0d-4d8c-bcab-69867066b666",
+          "body": "{\n  \"page\": 1,\n  \"docs\": [\n    {\n      \"id\": \"1\",\n      \"title\": \"todo 1\",\n      \"description\": \"description todo 1\"\n    },\n    {\n      \"id\": \"2\",\n      \"title\": \"todo 2\",\n      \"description\": \"description todo 2\"\n    },\n    {\n      \"id\": \"3\",\n      \"title\": \"todo 3\",\n      \"description\": \"description todo 3\"\n    },\n    {\n      \"id\": \"4\",\n      \"title\": \"todo 4\",\n      \"description\": \"description todo 4\"\n    },\n    {\n      \"id\": \"5\",\n      \"title\": \"todo 5\",\n      \"description\": \"description todo 5\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "1ba6c3ac-cedf-47ed-bda8-33d8e3fe0506",
+          "body": "{\n  \"page\": 1,\n  \"docs\": []\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "2d24b70e-ea06-4004-8457-8e6081353cdb",
+          "body": "{\n  \"message\": \"Internal Server Error\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": "SEQUENTIAL"
+    },
+    {
+      "uuid": "880dc063-b965-431d-b37b-80e00cd7fffa",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "todo",
+      "responses": [
+        {
+          "uuid": "39649241-41cb-49a1-86ab-099e6bda3342",
+          "body": "{\n  \"message\": \"Todo is created\"\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "5e1e990c-38cc-4369-9d61-b3ec3a0de01f",
+          "body": "{\n  \"message\": \"Internal Server Error\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": "SEQUENTIAL"
+    },
+    {
+      "uuid": "b441175f-b974-45aa-8bb5-be94dacb78aa",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "todo",
+      "responses": [
+        {
+          "uuid": "6dc95b6a-7b8e-43a3-a77e-68a315d7b4a3",
+          "body": "{\n  \"message\": \"Todo is updated\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "8d9111b7-7be7-4d74-8d62-be1023289900",
+          "body": "{\n  \"message\": \"Internal Server Error\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": "SEQUENTIAL"
+    },
+    {
+      "uuid": "8105d39c-515e-46e1-b759-eec76b018ee4",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "todo/:id",
+      "responses": [
+        {
+          "uuid": "c9346674-71f7-4825-9b0d-fea0b31376fd",
+          "body": "{\n  \"message\": \"Todo is deleted\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "6b70ff6f-23b5-46a0-9a2e-5ddf287f18f5",
+          "body": "{\n  \"message\": \"Internal Server Error\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": "SEQUENTIAL"
+    },
+    {
+      "uuid": "47369313-454d-458f-af85-40a046b74bfd",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "todo/:id",
+      "responses": [
+        {
+          "uuid": "ed6bcb75-562d-4e0f-940f-573ec61c82c4",
+          "body": "{\n  \"id\": \"1\",\n  \"title\": \"todo 1\",\n  \"description\": \"description todo 1\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "id",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "c06f4770-7b03-481c-a8e9-3511515cae69",
+          "body": "{\n  \"message\": \"Internal Server Error\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": "RANDOM"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

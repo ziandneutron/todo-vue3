@@ -19,6 +19,7 @@ describe('Test Feature Name List', () => {
 
     await flushPromises()
     
+    expectedTodoCardLengthToBe(0)
     expectedUiFailedExistsToBe(true)
     expectedUiEmptyExistsToBe(false)
   })
@@ -30,6 +31,7 @@ describe('Test Feature Name List', () => {
 
     await flushPromises()
 
+    expectedTodoCardLengthToBe(0)
     expectedUiEmptyExistsToBe(true)
     expectedUiFailedExistsToBe(false)
   })
@@ -41,7 +43,9 @@ describe('Test Feature Name List', () => {
 
     await flushPromises()
 
-    expectedTodoCardLengthToBeFive()
+    expectedTodoCardLengthToBe(5)
+    expectedUiFailedExistsToBe(false)
+    expectedUiEmptyExistsToBe(false)
   })
 })
 
@@ -119,7 +123,7 @@ function getTodoListMock() {
   })
 }
 
-function expectedTodoCardLengthToBeFive() {
+function expectedTodoCardLengthToBe(length) {
   const todoCard = wrapper.findAll('[data-test="todo-card"]')
-    expect(todoCard.length).toBe(5)
+    expect(todoCard.length).toBe(length)
 }

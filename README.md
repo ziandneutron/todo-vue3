@@ -16,6 +16,10 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+```sh
+cp .env.example .env
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
